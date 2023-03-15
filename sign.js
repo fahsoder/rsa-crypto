@@ -5,9 +5,13 @@ const private_key = fs.readFileSync('./keys/private_key.pem')
 
 const message = 'rsa crypto'
 
+// RSA-SHA256 
+// RSA = Par de chaves (bloquear e acessar o conteudo)
+// SHA256 = Criptografia em 256 bits (gerar o conteudo)
 const signer = crypto.createSign('RSA-SHA256')
 signer.update(message)
 
+// hex = representa uma sequência de caracteres hexadecimais da chave fornecida
 const sign = signer.sign(private_key, 'hex')
 
 

@@ -7,9 +7,13 @@ const message = 'rsa crypto'
 
 const sign = fs.readFileSync('./signed.txt', 'utf-8')
 
+// RSA-SHA256 
+// RSA = Par de chaves (bloquear e acessar o conteudo)
+// SHA256 = Criptografia em 256 bits (gerar o conteudo)
 const verifier = crypto.createVerify('RSA-SHA256')
 verifier.update(message)
 
+// hex = representa uma sequência de caracteres hexadecimais da chave fornecida
 const result = verifier.verify(public_key, sign, 'hex')
 
 fs.writeFileSync('./validated.txt', result.toString())
