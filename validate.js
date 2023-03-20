@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const public_key = fs.readFileSync('./keys/public_key.pem', 'utf-8')
 
-const message = 'rsa crypto'
+const message = fs.readFileSync('./sign_document.txt', 'utf-8')
 
 const sign = fs.readFileSync('./signed.txt', 'utf-8')
 

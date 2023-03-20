@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const private_key = fs.readFileSync('./keys/private_key.pem')
 
-const message = 'rsa crypto'
+const message = fs.readFileSync('./sign_document.txt', 'utf-8')
 
 // RSA-SHA256 
 // RSA = Par de chaves (bloquear e acessar o conteudo)
