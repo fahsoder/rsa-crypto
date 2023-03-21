@@ -7,8 +7,8 @@ You gonna see how to generate private and public keys and how to use them to enc
 
 ## Commands
 
-- `openssl genrsa -out private_key.pem 2048`
-- `openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem`
+- Generate private key: `openssl genrsa -out private_key.pem 2048`
+- Generate public key: `openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem`
 
 ## Reference
 
